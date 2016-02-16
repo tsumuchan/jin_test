@@ -26,6 +26,11 @@ android {
     }
 }
 
+task ndk_build(type: Exec) {
+    workingDir "src/main/jni"
+    commandLine "/Applications/adt/ndk/ndk-build"
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
